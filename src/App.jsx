@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-
 import { Users } from './components/FetchUsers'
+import { UserCard } from './components/UserCard'
+import './App.css'
 
 function App() {
   const [users, setUsers] = useState(JSON.parse(localStorage.getItem("users")) || [])
@@ -22,9 +22,7 @@ function App() {
     <>
       <h1>Gallery</h1>
       <div className="card">
-        {users?.map((user) => (<div key={user.id}>First Name: {user.user.first_name} Last Name: {user.user.last_name}
-          <img alt="profile image" src={user.user.profile_image.small} />
-        </div>))}
+        <UserCard users={users} />
       </div>
     </>
   )
