@@ -1,4 +1,4 @@
-.user{
+.img{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,7 @@
     margin: 1rem;
     padding: 10px;
 }
-.users_card{
+.img_card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
